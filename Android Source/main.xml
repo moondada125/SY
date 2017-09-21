@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_macro"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="8dp" >
+
+    <TextView
+        android:id="@+id/mainText01"
+        android:textAlignment="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="35dp"
+        android:gravity="center"
+        android:paddingTop="10dp"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:text="기본 제어 화면"/>
+
+    <TextView
+        android:text="현재 상태"
+        android:textAlignment="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="17dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/textView" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_weight="1">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="4dp"
+            android:paddingRight="2dp"
+            android:layout_weight="1">
+
+            <Button
+                android:id="@+id/lightbutton01"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textSize="25dp"
+                android:visibility="visible"
+                android:onClick="changebutton01"
+                android:text="전등"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/LightOn"
+                    android:text="켜짐"
+                    android:textSize="15dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:onClick="changebutton01"
+                    android:layout_weight="1"
+                    android:visibility="invisible"/>
+
+                <Button
+                    android:id="@+id/LightOff"
+                    android:text="꺼짐"
+                    android:textSize="15dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:onClick="changebutton01"
+                    android:layout_weight="1"
+                    android:visibility="invisible"/>
+            </LinearLayout>
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="4dp"
+            android:paddingLeft="2dp"
+            android:paddingRight="2dp"
+            android:layout_weight="1">
+
+            <Button
+                android:id="@+id/curtainbutton01"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textSize="29.5dp"
+                android:visibility="visible"
+                android:onClick="changebutton01"
+                android:text="커튼"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/CurtainUp"
+                    android:text="올림"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:onClick="changebutton01"
+                    android:layout_weight="1"
+                    android:visibility="invisible"/>
+
+                <Button
+                    android:id="@+id/CurtainDown"
+                    android:text="내림"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:onClick="changebutton01"
+                    android:layout_weight="1"
+                    android:visibility="invisible"/>
+
+                <Button
+                    android:id="@+id/CurtainStop"
+                    android:text="정지"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:onClick="changebutton01"
+                    android:layout_weight="1"
+                    android:visibility="invisible"/>
+            </LinearLayout>
+        </FrameLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_weight="4">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingRight="4dp"
+            android:paddingBottom="4dp"
+            android:layout_weight="1">
+
+            <Button
+                android:id="@+id/icamerabutton01"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="내부 카메라"
+                android:textSize="29.5dp"
+                android:layout_weight="1"
+                android:paddingRight="10dp"
+                android:onClick="moveIcamera"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="4dp"
+            android:paddingBottom="4dp"
+            android:layout_weight="1">
+
+            <Button
+                android:id="@+id/ocamerabutton01"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="외부 카메라"
+                android:textSize="29.5dp"
+                android:layout_weight="1"
+                android:paddingLeft="5dp"
+                android:onClick="moveOcamera"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/exitbutton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="나가기"
+        android:textSize="29.5dp" />
+</LinearLayout>
